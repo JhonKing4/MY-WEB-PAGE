@@ -204,3 +204,14 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+#language-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 10px;
+}
+#language-toggle:hover {
+  color: #00bfff;
+}
