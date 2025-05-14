@@ -1,0 +1,206 @@
+:root {
+  --black: #0d0d0d;
+  --gold: #d4af37;
+  --light-black: #1f1f1f;
+  --white: #f0f0f0;
+  --gold-hover: #ffd700;
+  --electric-blue: #4fc3f7;
+  --gray: #2c2c2c;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--gray);
+  border-bottom: 1px solid var(--gold);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--electric-blue);
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--light-black);
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  background-color: var(--gray);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  background-size: cover;
+  background-position: center;
+  background-image: url("./imagenes/IMG-20240903-WA0020.jpg");
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.intro-text {
+  background-color: var(--gray);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--gold);
+  color: var(--white);
+  max-width: 600px;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+.btn:hover {
+  background-color: var(--electric-blue);
+  transform: scale(1.05);
+}
+
+.skills-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill {
+  background-color: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  min-width: 120px;
+  max-width: 150px;
+  transition: background-color 0.3s;
+}
+
+.skill img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.skill:hover {
+  background-color: var(--gold-hover);
+  color: var(--black);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: var(--gray);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.social-icons i {
+  background-color: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--gold);
+  font-size: 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons i:hover {
+  background-color: var(--electric-blue);
+  color: var(--black);
+}
+
+.download-bottom {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    padding: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
